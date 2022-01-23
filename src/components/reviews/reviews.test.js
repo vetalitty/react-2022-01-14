@@ -16,6 +16,11 @@ describe('Reviews', () => {
     expect(wrapper.find('[data-id="reviews"]').length).toBe(1);
   });
 
+  it('should render all reviews', () => {
+    const wrapper = mount(<Reviews reviews={reviews} />);
+    expect(wrapper.find('[data-id="review"]').length).toBe(reviews.length);
+  });
+
   it('should have user name', () => {
     const wrapper = mount(
       <Review user={review.user} rating={review.rating} text={review.text} />
