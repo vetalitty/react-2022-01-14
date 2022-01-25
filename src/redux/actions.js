@@ -1,4 +1,4 @@
 import { DECREMENT, INCREMENT } from './reducer/constants';
 
-export const decrement = () => ({ type: DECREMENT });
-export const increment = () => ({ type: INCREMENT });
+export const decrement = (id) => ({ type: DECREMENT, id });
+export const increment = (id) => ({ type: INCREMENT, id });
