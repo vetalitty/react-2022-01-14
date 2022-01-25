@@ -27,8 +27,8 @@ function Product({ product, amount, decrement, increment, fetchData }) {
               <Button onClick={decrement} icon="minus" />
               <Button
                 onClick={increment}
-                icon="plus"
                 data-id="product-increment"
+                icon="plus"
               />
             </div>
           </div>
@@ -40,10 +40,12 @@ function Product({ product, amount, decrement, increment, fetchData }) {
 
 Product.propTypes = {
   product: PropTypes.shape({
-    ingredients: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     name: PropTypes.string,
     price: PropTypes.number,
+    ingredients: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired,
+  fetchData: PropTypes.func,
+  // from HOC counter
   amount: PropTypes.number,
   decrement: PropTypes.func,
   increment: PropTypes.func,
