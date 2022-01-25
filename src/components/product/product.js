@@ -60,9 +60,14 @@ const mapStateToProps = (state) => ({
   amount: state.order,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  decrement: () => dispatch(decrement()),
-  increment: () => dispatch(increment()),
-});
+const mapDispatchToProps = {
+  decrement,
+  increment,
+};
+
+// const mapDispatchToProps = (dispatch) => ({
+//   decrement: () => dispatch(decrement()),
+//   increment: (a, b, c) => dispatch(increment(a, b, c)),
+// });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Product);
