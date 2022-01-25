@@ -23,6 +23,7 @@
     ],
     "rules": {
       "import/no-anonymous-default-export": 0,
+      "testing-library/no-render-in-setup": 0,
       "testing-library/render-result-naming-convention": 0
     }
   },
