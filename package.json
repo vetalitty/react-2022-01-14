@@ -22,7 +22,8 @@
       "react-app/jest"
     ],
     "rules": {
-      "import/no-anonymous-default-export": 0
+      "import/no-anonymous-default-export": 0,
+      "testing-library/render-result-naming-convention": 0
     }
   },
   "browserslist": {
